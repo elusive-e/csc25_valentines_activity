@@ -113,7 +113,7 @@ class Ui_MainWindow(object):
         self.question_1.setText(_translate("MainWindow", "Question 1: What is Ellie's favorite color?"))
         self.question_2.setText(_translate("MainWindow", "Question 2: Which city would Ellie rather visit?"))
         self.question_3.setText(_translate("MainWindow", "Question 3: Which word best describes Ellie?"))
-        self.pushButton.setText(_translate("MainWindow", "PushButton"))
+        self.submit_button.setText(_translate("MainWindow", "SUBMIT"))
         self.answer_3.setText(_translate("MainWindow", "Green"))
         self.answer_4.setText(_translate("MainWindow", "Blue"))
         self.answer_5.setText(_translate("MainWindow", "Philadelphia"))

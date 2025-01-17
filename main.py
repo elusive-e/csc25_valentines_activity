@@ -12,6 +12,7 @@ from OpenGL import GLU
 class MainMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(MainMainWindow, self).__init__()
+        self.score = None
         self.setupUi(self)
         self.mmmm = self.molecule_maker_tab(self)
         self.mf = self.MenuFunctionsss(self)
@@ -22,6 +23,19 @@ class MainMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.pushButton_11.clicked.connect(self.mmmm.smiles_import)
         self.pushButton_9.clicked.connect(self.mmmm.load_pdbmmmm)
         self.pushButton_10.clicked.connect(self.mmmm.save_file)
+        def start_score():
+            self.score= 0
+        def subtract_score():
+            self.score -= 1
+        def add_score():
+            self.score += 1
+        def match():
+            if self.score < 2:
+                #not a match
+
+            if self.score >= 2:
+                #match
+                #encrypt a message
 
 
 if __name__ == "__main__":

@@ -1,6 +1,3 @@
-#code goes here
-# step 1 set up the layout
-#connect buttons
 # mark clearly where the questions and answers are
 #add encryption logic
 #add different encruption methods???
@@ -30,16 +27,7 @@ class MainMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     window = MainMainWindow()
-    smilesdialog = SMILESInputWindow()
-    bonddialog = BondManager()
-    atomdialog = AtomManager()
-    cswindow = CSInputWindow()
-    cswindow.hide()
-    viewerwindow = Viewer()
-    viewerwindow.hide()
-    smilesdialog.hide()
-    bonddialog.hide()
-    atomdialog.hide()
+    end_dialog.hide()
     window.show()
 
 

@@ -6,3 +6,4 @@ Instructions to make your own version of this:
 2. edit the questions and answers and which ones are correct
 3. download your branch
 4. tada!
+also side note its so fun to do a project thats not like calcukus levels of difficulty who knew coding could be fun???

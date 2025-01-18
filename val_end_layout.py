@@ -1,44 +1,42 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtSvg import QSvgWidget
+from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class end_Dialog(object):
-    def setupUi(self, Dialog):
-        Dialog.setObjectName("Dialog")
-        Dialog.resize(452, 284)
-        self.gridLayout = QtWidgets.QGridLayout(Dialog)
+class Ui_end_Screen(object):
+    def setupUi(self, end_Screen):
+        end_Screen.setObjectName("end_Screen")
+        end_Screen.resize(452, 284)
+        self.gridLayout = QtWidgets.QGridLayout(end_Screen)
         self.gridLayout.setObjectName("gridLayout")
-        self.pushButton_2 = QtWidgets.QPushButton(Dialog)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.gridLayout.addWidget(self.pushButton_2, 6, 1, 1, 1)
-        self.match_or_not = QtWidgets.QLabel(Dialog)
-        self.match_or_not.setObjectName("match_or_not")
-        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
-        #ADD SVG
-        self.textBrowser = QtWidgets.QTextBrowser(Dialog)
-        self.textBrowser.setObjectName("textBrowser")
-        self.gridLayout.addWidget(self.textBrowser, 5, 0, 1, 2)
-        self.pushButton = QtWidgets.QPushButton(Dialog)
-        self.pushButton.setObjectName("pushButton")
-        self.gridLayout.addWidget(self.pushButton, 6, 0, 1, 1)
-        self.message = QtWidgets.QLabel(Dialog)
-        self.message.setObjectName("message")
-        self.gridLayout.addWidget(self.label_2, 2, 0, 1, 2)
-        self.hint = QtWidgets.QLabel(Dialog)
+        self.hint = QtWidgets.QLabel(end_Screen)
         self.hint.setObjectName("hint")
-        self.gridLayout.addWidget(self.label_3, 3, 0, 1, 2)
-        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout.addItem(spacerItem, 1, 0, 1, 1)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout.addItem(spacerItem1, 4, 0, 1, 1)
+        self.gridLayout.addWidget(self.hint, 2, 0, 1, 2)
+        self.makeurown = QtWidgets.QPushButton(end_Screen)
+        self.makeurown.setObjectName("makeurown")
+        self.gridLayout.addWidget(self.makeurown, 4, 1, 1, 1)
+        self.message = QtWidgets.QLabel(end_Screen)
+        self.message.setObjectName("message")
+        self.gridLayout.addWidget(self.message, 1, 0, 1, 2)
+        self.match = QtWidgets.QLabel(end_Screen)
+        self.match.setObjectName("match")
+        self.gridLayout.addWidget(self.match, 0, 0, 1, 1)
+        #ellie's svg is from goodfreephotos.com
+        self.graphicsView = QSvgWidget("final658-heart-in-heart.svg",end_Dialog)
+        self.graphicsView.setObjectName("graphicsView")
+        self.gridLayout.addWidget(self.graphicsView, 5, 0, 1, 2)
+        self.see_answers = QtWidgets.QPushButton(end_Screen)
+        self.see_answers.setObjectName("see_answers")
+        self.gridLayout.addWidget(self.see_answers, 4, 0, 1, 1)
 
-        self.retranslateUi(Dialog)
-        QtCore.QMetaObject.connectSlotsByName(Dialog)
+        self.retranslateUi(end_Screen)
+        QtCore.QMetaObject.connectSlotsByName(end_Screen)
 
-    def retranslateUi(self, Dialog):
+    def retranslateUi(self, end_Screen):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.pushButton_2.setText(_translate("Dialog", "Make your own"))
-        self.match_or_not.setText(_translate("Dialog", "We\'re a match!"))
-        self.pushButton.setText(_translate("Dialog", "See your answers"))
-        self.message.setText(_translate("Dialog", "Here is your message from your match: \"\""))
-        self.hint.setText(_translate("Dialog", "Hint: Your encryption key is the length of one of the answers from the quiz!"))
+        end_Screen.setWindowTitle(_translate("end_Screen", "Dialog"))
+        self.hint.setText(_translate("end_Screen", "Hint: Your encryption key is the length of one of the answers from the quiz!"))
+        self.makeurown.setText(_translate("end_Screen", "Make your own"))
+        self.message.setText(_translate("end_Screen", "Here is your message from your match: \"\""))
+        self.match.setText(_translate("end_Screen", "We\'re a match!"))
+        self.see_answers.setText(_translate("end_Screen", "See your answers"))
